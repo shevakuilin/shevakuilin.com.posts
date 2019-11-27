@@ -171,3 +171,66 @@ func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
 ```
 
 以上就完成了针对SDWebImage框架的「渐变」效果修改，几行代码即可搞定，完全不需要对SDWebImage进行内部修改，有时候换一种思路思考问题，世界会豁然开朗。
+
+上面的代码只是为了演示，最好还是将其进行封装：
+
+```objective-c
+// UIImageView+IETransition.h
+
+#import <UIKit/UIKit.h>
+
+@interface UIImageView (IETransition)<CAAnimationDelegate>
+
+/** 渐变动画加载 URL 图片
+ *
+ * @param imageURL					图片 URL
+ * @param placeholderImage	占位图
+ *
+ */
+- (void)ie_transitionFadeLoadImage:(NSURL *)imageURL placeholderImage:(UIImage * _Nullable)placeholderImage;
+
+@end
+
+```
+
+```objective-c
+//  UIImageView+IETransition.m
+
+#import "UIImageView+IETransition.h"
+
+static NSString *const ANIMATIONKEY_TRANSITION_FADE = @"IETransitionFade";
+
+@implementation UIImageView (IETransition)
+
+#pragma mark - 渐变动画加载 URL 图片
+
+- (void)ie_transitionFadeLoadImage:(NSURL *)imageURL placeholderImage:(UIImage * _Nullable)placeholderImage {
+// - Note: 如果需要纯色占位图，可以将下面注释打开替换成具体颜色
+//    if (!placeholderImage) {
+//        self.backgroundColor = MainDefaultImageBgColor;
+//    }
+    @weakify(self)
+    [self sd_setImageWithURL:imageURL placeholderImage:placeholderImage options:SDWebImageLowPriority completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        @strongify(self)
+        if (image && cacheType == SDImageCacheTypeNone) { // 只有当缓存中没有图片，也就是首次加载时才实现CATransition动画
+            CATransition *transition = [CATransition animation];
+            transition.delegate = self;
+            transition.type = kCATransitionFade; // 褪色效果，渐进效果的基础
+            transition.duration = 0.85f;
+            transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]; // 先慢后快再慢
+            [self.layer addAnimation:transition forKey:ANIMATIONKEY_TRANSITION_FADE];
+        }
+    }];
+}
+
+#pragma mark - CAAnimationDelegate
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    if (flag) {
+        [self.layer removeAnimationForKey:ANIMATIONKEY_TRANSITION_FADE];
+    }
+}
+
+@end
+```
+
