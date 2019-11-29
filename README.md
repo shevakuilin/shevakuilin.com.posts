@@ -44,7 +44,7 @@ Stay hungry, stay foolish
 
 ------
 
-[《大阪京都の见闻录》]()(./posts/travels/大阪京都の见闻录.md)
+[《大阪京都の见闻录》](./posts/travels/大阪京都の见闻录.md)
 
 <h3 id="4">随笔</h3>
 如果我们的语言是威士忌
