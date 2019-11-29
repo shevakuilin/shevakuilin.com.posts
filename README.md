@@ -16,11 +16,11 @@
 
 -----
 
+[《斐波那契数列》](./posts/algorithm/斐波那契数列.md)
+
 [《判断图中是否存在环》](./posts/algorithm/判断图中是否存在环.md)
 
 [《两数之和-输入有序数组》](./posts/algorithm/两数之和-输入有序数组.md)
-
-[《斐波那契数列》](./posts/algorithm/斐波那契数列.md)
 
 <h2 id="2">For iOS</h2>
 Stay hungry, stay foolish
@@ -51,13 +51,13 @@ Stay hungry, stay foolish
 
 -----
 
-[《2017上海 Google Developer Days 之旅》](./posts/essay/2017上海GoogleDeveloperDays之旅.md)
-
 [《数字货币DCEP--美元霸权的终结者》](./posts/essay/数字货币DCEP--美元霸权的终结者.md)
 
 [《难追难回味》](./posts/essay/难追难回味.md)
 
 [《2018年终总结》](./posts/essay/2018年终总结.md)
+
+[《2017上海 Google Developer Days 之旅》](./posts/essay/2017上海GoogleDeveloperDays之旅.md)
 
 <h3 id="5">折腾日记</h3>
 做过的梦是一阵漩涡
