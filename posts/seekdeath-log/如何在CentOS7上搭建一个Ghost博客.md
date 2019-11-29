@@ -377,7 +377,7 @@ $ sudo chown <user>:<user> /var/www/ghost
 $ sudo chmod 775 /var/www/ghost
 ```
 
-`` 为刚才登陆的用户
+`<user>` 为刚才登陆的用户
 
 进入到网站目录：
 
