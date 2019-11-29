@@ -14,13 +14,13 @@ shevakuilin.com 文章备份，如果无法访问，可以直接来这里阅读
 <h2  id="1">算法</h2>
 格物致知，静水流深
 
+-----
 
+[《判断图中是否存在环》](./posts/algorithm/判断图中是否存在环.md)
 
-[《判断图中是否存在环》](./algorithm/判断图中是否存在环.md)
+[《两数之和-输入有序数组》](./posts/algorithm/两数之和-输入有序数组.md)
 
-[《两数之和-输入有序数组》](./algorithm/两数之和-输入有序数组.md)
-
-[《斐波那契数列》](./algorithm/斐波那契数列.md)
+[《斐波那契数列》](./posts/algorithm/斐波那契数列.md)
 
 <h2 id="2">For iOS</h2>
 Stay hungry, stay foolish
