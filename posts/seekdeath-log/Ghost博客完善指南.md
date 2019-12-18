@@ -223,9 +223,15 @@ Congratulations! You have successfully enabled https://shevakuilin.com
 
 在这段信息下面的 `IMPORTANT NOTES` 中，会列出你的证书安装路径，以及到期时间。
 
-为了安全起见，Certbot 默认的证书过期时间是 `90` 天，通过第 5 步的设置，就不需要担心这一点了，会自动续订我们的 HTTPS 证书。
+### 6. 自动续订 HTTPS 证书
 
-### 6. 测试
+为了安全起见，Certbot 默认的证书过期时间是 `90` 天，执行下面的命令，就不需要担心这一点了，会自动续订我们的 HTTPS 证书：
+
+```vim
+$ echo "0 0,12 * * * root python -c 'import random; import time; time.sleep(random.random() * 3600)' && certbot renew" | sudo tee -a /etc/crontab > /dev/null
+```
+
+### 7. 测试
 
 现在你就可以测试你的 HTTPS 新网站了，测试配置地址：
 
