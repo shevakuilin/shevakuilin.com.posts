@@ -14,7 +14,7 @@
 
 本文以目前主流的两大分发平台 [Pgyer ( 蒲公英 )]([https://www.pgyer.com](https://www.pgyer.com/)) 和 [Bugly ( 腾讯 Bugly )]([https://bugly.qq.com](https://bugly.qq.com/)) 为例，从头搭建一个全自动化分发环境，以及 Fastlane 脚本的示范编写。
 
-本文以下内容的运行环境（2019-12-19 更新）：
+**本文以下内容的运行环境（2019-12-19 更新）：**
 
 - Xcode: 11.1
 
