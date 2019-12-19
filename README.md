@@ -35,7 +35,7 @@ Stay hungry, stay foolish
 
 [《iOS 组件化之路（二）----- 私有库podspec文件编写 & 验证的踩坑记录》](./posts/ios/iOS组件化之路（二）-----私有库podspec文件编写验证的踩坑记录.md)
 
-[《Fastlane 一键打包上传至 Bugly 的全自动化测试分发的搭建》](./posts/ios/Fastlane一键打包上传至Bugly的全自动化测试分发的搭建.md)
+[《Fastlane 全自动化测试分发的搭建，一键打包上传至 Pgyer/Bugly》](./posts/ios/Fastlane 全自动化测试分发的搭建，一键打包上传至 Pgyer/Bugly.md)
 
 [《使用 SwiftUI 构建你的新应用》](./posts/ios/使用SwiftUI构建你的新应用.md)
 
