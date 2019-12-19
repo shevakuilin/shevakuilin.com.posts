@@ -104,15 +104,15 @@ cd 到项目目录，执行初始化命令：
 $ fastlane init
 ```
 
-首先会询问你使用 Fastlane 的目的，这里我们由于只需要搭建自动分发，所以，选择 `4`
+首先会询问你使用 Fastlane 的目的，这里我们由于只需要搭建自动分发，所以，选择 `4`：
 
 ![](https://github.com/shevakuilin/GhostImageFastlane/raw/master/3AF94A17-BCF1-453D-8228-E4FE9062EB70.png)
 
-然后根据提示进行操作即可
+然后根据提示进行操作即可：
 
 ![](https://github.com/shevakuilin/GhostImageFastlane/raw/master/D2D8F13A-2417-44C8-B4DD-6872F32310EA.png)
 
-初始化完成后提示如下
+初始化完成后提示如下：
 
 ![](https://github.com/shevakuilin/GhostImageFastlane/raw/master/FF17F5D2-2750-4A32-8D14-A5D1E9CAA323.png)
 
@@ -122,7 +122,7 @@ $ fastlane init
 
 ## Fastfile 脚本的编写
 
-初始化完成后，Fastlane 就可以投入使用了。Fastlane 整个自动化的核心就是 Fastfile 这个脚本执行文件和控制自动化链条的 Action，所以，如果想要完成自动化测试发布，就需要对这个文件进行自定义编写，并处理其相应的 Action。
+初始化完成后，Fastlane 就可以投入使用了。Fastlane 整个自动化的核心就是 fastfile 这个脚本执行文件和控制自动化链条的 Action，所以，如果想要完成自动化测试发布，就需要对这个文件进行自定义编写，并处理其相应的 Action。
 
 我们先将自动化测试发布的步骤，按照一个个 Action 进行独立拆分，最后在合并成为完整的一键自动化流程。
 
@@ -133,11 +133,13 @@ $ fastlane init
 - lane 指令的配置
 
 - gym Action 的自动打包脚本编写
+
 - increment_build_number 累加 Build 版本号
 
 - 自动上传 ipa 到 Pgyer / Bugly 的脚本编写
 
 - 手动设置参数任务的编写，用于自定义 Pgyer / Bugly 上传参数
+
 - 浏览器页面打开脚本编写
 
 - 合并编写好的脚本到统一的lane指令
@@ -146,7 +148,7 @@ $ fastlane init
 
 #### lane指令的配置
 
-打开 Fastlane 文件夹下的 Fastfile，注意，一定不能直接使用文本编辑器打开，会引起自动引号等报错，这里推荐使用 [Visual Studio Code](https://code.visualstudio.com/) 选择 Ruby 文本样式来打开编写。
+打开 Fastlane 文件夹下的 fastfile，注意，一定不能直接使用文本编辑器打开，会引起自动引号等报错，这里推荐使用 [Visual Studio Code](https://code.visualstudio.com/) 选择 Ruby 文本样式来打开编写。
 
 lane指令的配置非常简单，直接用以下内容覆盖 fastfile 默认的模板：
 
@@ -209,20 +211,20 @@ platform :ios do
 
 # 一键打包上传到 Pgyer/Bugly
 lane :ad do
-	scheme = "Your project scheme"
-	currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
-	output_path = "../ipa_name #{currentTime}"
-	ipa_name = "Your ipa name"
+  scheme = "Your project scheme"
+  currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
+  output_path = "../ipa_name #{currentTime}"
+  ipa_name = "Your ipa name"
 
   # 自动打ad_hoc测试包
   gym(
-      workspace:"xxxx.xcworkspace",
-      scheme:"#{scheme}",
-      output_name:"#{ipa_name}",
-      clean:true,
-      configuration:"Release",
-      export_method:"ad-hoc",
-      output_directory:"#{output_path}",
+    workspace:"xxxx.xcworkspace",
+    scheme:"#{scheme}",
+    output_name:"#{ipa_name}",
+    clean:true,
+    configuration:"Release",
+    export_method:"ad-hoc",
+    output_directory:"#{output_path}",
   )
 end
 end
@@ -238,23 +240,23 @@ platform :ios do
 
 # 一键打包上传到 Pgyer/Bugly
 lane :ad do
-	scheme = "Your project scheme"
-	currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
-	output_path = "../ipa_name #{currentTime}"
-	ipa_name = "Your ipa name"
+  scheme = "Your project scheme"
+  currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
+  output_path = "../ipa_name #{currentTime}"
+  ipa_name = "Your ipa name"
 
   # Build 自动增加, 会自动的再当前 build version 的基础上 +1, 需要对工程进行额外配置，下文会说明
-	increment_build_number
+  increment_build_number
   
   # 自动打 ad_hoc 测试包
   gym(
-      workspace:"xxxx.xcworkspace",
-      scheme:"#{scheme}",
-      output_name:"#{ipa_name}",
-      clean:true,
-      configuration:"Release",
-      export_method:"ad-hoc",
-      output_directory:"#{output_path}",
+    workspace:"xxxx.xcworkspace",
+    scheme:"#{scheme}",
+    output_name:"#{ipa_name}",
+    clean:true,
+    configuration:"Release",
+    export_method:"ad-hoc",
+    output_directory:"#{output_path}",
   )
 end
 end
@@ -266,7 +268,7 @@ end
 
 其原理是代替我们调用了 Xcode 自带的自动增加版本号的命令行工具 `agvtool`。有对 `agvtool` 感兴趣的可以了解一下[具体如何使用](https://segmentfault.com/a/1190000004678950)。
 
-在 Fastfile 脚本文件中添加了 increment_build_number 之后，还需要对 Xcode 进行额外的工程配置：
+在 fastfile 脚本文件中添加了 increment_build_number 之后，还需要对 Xcode 进行额外的工程配置：
 
 注意：如果有多个 Target，需要对每个Target 都进行下面的设置
 
@@ -324,7 +326,7 @@ $ fastlane add_plugin pgyer
 
 `api_key` 和 `user_key`，在自己账号下的 `应用管理` - `App概述` - `API` 中可以找到，替换到对应的位置即可。蒲公英插件不支持修改测试包名，仅支持更新描述的修改。
 
-此时，你的 Fastfile 应该是这样：
+此时，你的 fastfile 应该是这样：
 
 ```ruby
 default_platform(:ios)
@@ -332,23 +334,23 @@ platform :ios do
 
 # 一键打包上传到 Pgyer
 lane :ad do
-	scheme = "Your project scheme"
-	currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
-	output_path = "../ipa_name #{currentTime}"
-	ipa_name = "Your ipa name"
+  scheme = "Your project scheme"
+  currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
+  output_path = "../ipa_name #{currentTime}"
+  ipa_name = "Your ipa name"
 
   # Build 自动增加, 会自动的再当前 build version 的基础上 +1, 需要对工程进行额外配置，下文会说明
-	increment_build_number
+  increment_build_number
   
   # 自动打 ad_hoc 测试包
   gym(
-      workspace:"xxxx.xcworkspace",
-      scheme:"#{scheme}",
-      output_name:"#{ipa_name}",
-      clean:true,
-      configuration:"Release",
-      export_method:"ad-hoc",
-      output_directory:"#{output_path}",
+    workspace:"xxxx.xcworkspace",
+    scheme:"#{scheme}",
+    output_name:"#{ipa_name}",
+    clean:true,
+    configuration:"Release",
+    export_method:"ad-hoc",
+    output_directory:"#{output_path}",
   )
   
   # 上传到蒲公英
@@ -392,26 +394,26 @@ ipa_path = "#{output_path}/#{ipa_name}.ipa"
 
 #上传 Bugly
 upload_app_to_bugly(
-	# ipa 的文件绝对路径
-	file_path:"#{ipa_path}",
-	# 应用编号, 用于识别产品的唯一 ID
-	app_key:"xxxxx",
-	# 用于识别 API 调用者身份, 创建应用时自动获得
-	app_id:"xxxx",
-	# 应用平台标识, 用于区分产品平台 android:1 iOS:2
-	pid:"2",
-	# 版本名称, 如有中文必须 UTF-8 格式
-	title:"xxxxx",
-	# 版本介绍, 如有中文必须 UTF-8 格式
-	desc:"xxxxx",
-	# 公开范围（1:所有人, 2:密码, 4:管理员, 5:QQ群, 6:白名单, 默认所有人）
-	secret:"1",
-	# 如果公开范围是"QQ 群"填写 QQ 群号, 如果是"白名单"填写QQ号码, 并使用; 切分开, 5000个以内. 其他场景无需设置
-	users:"",
-	# 如果公开范围是"密码"需设置
-	password:"",
-	# 下载上限（大于0, 默认1000）
-	download_limit:999
+  # ipa 的文件绝对路径
+  file_path:"#{ipa_path}",
+  # 应用编号, 用于识别产品的唯一 ID
+  app_key:"xxxxx",
+  # 用于识别 API 调用者身份, 创建应用时自动获得
+  app_id:"xxxx",
+  # 应用平台标识, 用于区分产品平台 android:1 iOS:2
+  pid:"2",
+  # 版本名称, 如有中文必须 UTF-8 格式
+  title:"xxxxx",
+  # 版本介绍, 如有中文必须 UTF-8 格式
+  desc:"xxxxx",
+  # 公开范围（1:所有人, 2:密码, 4:管理员, 5:QQ群, 6:白名单, 默认所有人）
+  secret:"1",
+  # 如果公开范围是"QQ 群"填写 QQ 群号, 如果是"白名单"填写QQ号码, 并使用; 切分开, 5000个以内. 其他场景无需设置
+  users:"",
+  # 如果公开范围是"密码"需设置
+  password:"",
+  # 下载上限（大于0, 默认1000）
+  download_limit:999
 )
 ```
 
@@ -425,39 +427,39 @@ platform :ios do
 
 # 一键打包上传到 Bugly
 lane :ad do
-	scheme = "Your project scheme"
-	currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
-	output_path = "../ipa_name #{currentTime}"
-	ipa_name = "Your ipa name"
-	ipa_path = "#{output_path}/#{ipa_name}.ipa"
-	
-	# Build 自动增加
-	increment_build_number
-	
-	# 自动打 ad_hoc 测试包
-	gym(
-  		workspace:"xxxx.xcworkspace",
-  		scheme:"#{scheme}",
-  		output_name:"#{ipa_name}",
-  		clean:true,
-  		configuration:"Release",
-  		export_method:"ad-hoc",
-  		output_directory:"#{output_path}",
-	)
-	
-	# 上传 Bugly
-	upload_app_to_bugly(
-		file_path:"#{ipa_path}",
-		app_key:"xxxxx",
-		app_id:"xxxx",
-		pid:"2",
-		title:"xxxxx",
-		desc:"xxxxx",
-		secret:"1",
-		users:"",
-		password:"",
-		download_limit:999
-	)
+  scheme = "Your project scheme"
+  currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
+  output_path = "../ipa_name #{currentTime}"
+  ipa_name = "Your ipa name"
+  ipa_path = "#{output_path}/#{ipa_name}.ipa"
+
+  # Build 自动增加
+  increment_build_number
+
+  # 自动打 ad_hoc 测试包
+  gym(
+    workspace:"xxxx.xcworkspace",
+    scheme:"#{scheme}",
+    output_name:"#{ipa_name}",
+    clean:true,
+    configuration:"Release",
+    export_method:"ad-hoc",
+    output_directory:"#{output_path}",
+  )
+
+  # 上传 Bugly
+  upload_app_to_bugly(
+    file_path:"#{ipa_path}",
+    app_key:"xxxxx",
+    app_id:"xxxx",
+    pid:"2",
+    title:"xxxxx",
+    desc:"xxxxx",
+    secret:"1",
+    users:"",
+    password:"",
+    download_limit:999
+  )
 
 end
 end
@@ -480,21 +482,21 @@ version_title = "xxx"
 version_desc = "xxxxxx"
 
 begin
-	# 选择是否手动设置测试包的标题和描述
-	puts "Do you want to manually set the title of the test package & description? (y/n)" 
-	res = STDIN.gets.chomp
+  # 选择是否手动设置测试包的标题和描述
+  puts "Do you want to manually set the title of the test package & description? (y/n)" 
+  res = STDIN.gets.chomp
 
-	if res != "n"
-		# 用于 Bugly 显示的测试包标题 (仅使用蒲公英的话，设置标题的部分可以屏蔽掉)
-		print Input title:  "
-		version_title = STDIN.gets.chomp
-		puts "---Title set successfully!---"
+  if res != "n"
+      # 用于 Bugly 显示的测试包标题 (仅使用蒲公英的话，设置标题的部分可以屏蔽掉)
+      print Input title:  "
+      version_title = STDIN.gets.chomp
+      puts "---Title set successfully!---"
 
-		# 用于  Pgyer/Bugly 显示的测试包更新描述
-		print "Input description:  "
-		version_desc = STDIN.gets.chomp
-		puts "---Description set successfully!---"
-	end
+      # 用于  Pgyer/Bugly 显示的测试包更新描述
+      print "Input description:  "
+      version_desc = STDIN.gets.chomp
+      puts "---Description set successfully!---"
+  end
 end
 ```
 
@@ -510,45 +512,45 @@ platform :ios do
 
 # 一键打包上传到 Pgyer/Bugly
 lane :ad do
-	scheme = "Your project scheme"
-	currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
-	output_path = "../ipa_name #{currentTime}"
-	ipa_name = "Your ipa name"
-	ipa_path = "#{output_path}/#{ipa_name}.ipa"
-	version_title = "xxx"
-	version_desc = "xxxxxx"
+  scheme = "Your project scheme"
+  currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
+  output_path = "../ipa_name #{currentTime}"
+  ipa_name = "Your ipa name"
+  ipa_path = "#{output_path}/#{ipa_name}.ipa"
+  version_title = "xxx"
+  version_desc = "xxxxxx"
 	
-	begin
-		# 选择是否手动设置测试包的标题和描述
-		puts "Do you want to manually set the title of the test package & description? (y/n)" 
-		res = STDIN.gets.chomp
+  begin
+    # 选择是否手动设置测试包的标题和描述
+    puts "Do you want to manually set the title of the test package & description? (y/n)" 
+    res = STDIN.gets.chomp
 
-		if res != "n"
-			# 用于 Bugly 显示的测试包标题
-			print "Input title:  "
-			version_title = STDIN.gets.chomp
-			puts "---Title set successfully!---"
+    if res != "n"
+	# 用于 Bugly 显示的测试包标题
+	print "Input title:  "
+	version_title = STDIN.gets.chomp
+	puts "---Title set successfully!---"
 
-			# 用于 Pgyer/Bugly 显示的测试包更新描述
-			print "Input description:  "
-			version_desc = STDIN.gets.chomp
-			puts "---Description set successfully!---"
-		end
-	end
+	# 用于 Pgyer/Bugly 显示的测试包更新描述
+	print "Input description:  "
+	version_desc = STDIN.gets.chomp
+	puts "---Description set successfully!---"
+    end
+ end
 	
-	#build自动增加
-	increment_build_number
+  #build自动增加
+  increment_build_number
 	
-	#自动打 ad_hoc 测试包
-	gym(
-  		workspace:"xxxx.xcworkspace",
-  		scheme:"#{scheme}",
-  		output_name:"#{ipa_name}",
-  		clean:true,
-  		configuration:"Release",
-  		export_method:"ad-hoc",
-  		output_directory:"#{output_path}",
-	)
+  #自动打 ad_hoc 测试包
+  gym(
+    workspace:"xxxx.xcworkspace",
+    scheme:"#{scheme}",
+    output_name:"#{ipa_name}",
+    clean:true,
+    configuration:"Release",
+    export_method:"ad-hoc",
+    output_directory:"#{output_path}",
+  )
 	
   # 上传到蒲公英 (两种上传平台二选一)
   pgyer(
@@ -560,19 +562,19 @@ lane :ad do
     update_description: "#{version_desc}"
   )
   
-	# 上传Bugly (两种上传平台二选一)
-	upload_app_to_bugly(
-		file_path:"#{ipa_path}",
-		app_key:"xxxxx",
-		app_id:"xxxx",
-		pid:"2",
-		title:"#{version_title}",",
-		desc:"{version_desc}",
-		secret:"1",
-		users:"",
-		password:"",
-		download_limit:999
-	)
+  # 上传Bugly (两种上传平台二选一)
+  upload_app_to_bugly(
+    file_path:"#{ipa_path}",
+    app_key:"xxxxx",
+    app_id:"xxxx",
+    pid:"2",
+    title:"#{version_title}",",
+    desc:"{version_desc}",
+    secret:"1",
+    users:"",
+    password:"",
+    download_limit:999
+  )
 
 end
 end
@@ -607,7 +609,7 @@ print "Input title:  "
 ```ruby
 # 设置文本颜色
 def colorize(text, color_code)
-	"\e[#{color_code}m#{text}\e[0m"
+  "\e[#{color_code}m#{text}\e[0m"
 end
 
 # 绿色
@@ -639,54 +641,54 @@ platform :ios do
 
 # 一键打包上传到 Pgyer/Bugly
 lane :ad do
-	scheme = "Your project scheme"
-	currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
-	output_path = "../ipa_name #{currentTime}"
-	ipa_name = "Your ipa name"
-	ipa_path = "#{output_path}/#{ipa_name}.ipa"
-	version_title = "xxx"
-	version_desc = "xxxxxx"
+  scheme = "Your project scheme"
+  currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
+  output_path = "../ipa_name #{currentTime}"
+  ipa_name = "Your ipa name"
+  ipa_path = "#{output_path}/#{ipa_name}.ipa"
+  version_title = "xxx"
+  version_desc = "xxxxxx"
   
   def colorize(text, color_code)
-    	"\e[#{color_code}m#{text}\e[0m"
-  	end
+    "\e[#{color_code}m#{text}\e[0m"
+  end
 
-  	def green(text); colorize(text, 32); end
-  	def magenta(text); colorize(text, 35); end
-  	def cyan(text); colorize(text, 36); end
+  def green(text); colorize(text, 32); end
+  def magenta(text); colorize(text, 35); end
+  def cyan(text); colorize(text, 36); end
 	
-	begin
-		# 选择是否手动设置测试包的标题和描述
-		puts ""+ magenta("Do you want to manually set the title of the test package & description? (y/n)") +"" 
-		res = STDIN.gets.chomp
+  begin
+    # 选择是否手动设置测试包的标题和描述
+    puts ""+ magenta("Do you want to manually set the title of the test package & description? (y/n)") +"" 
+    res = STDIN.gets.chomp
 
-		if res != "n"
-			# 用于 Bugly 显示的测试包标题
-			print ""+ magenta("Input title:  ") +""
-			version_title = STDIN.gets.chomp
-			puts ""+ green("---Title set successfully!---") +""
+    if res != "n"
+	# 用于 Bugly 显示的测试包标题
+	print ""+ magenta("Input title:  ") +""
+	version_title = STDIN.gets.chomp
+	puts ""+ green("---Title set successfully!---") +""
 
-			# 用于 Pgyer/Bugly 显示的测试包更新描述
-			print ""+ magenta("Input description:  ") +""
-			version_desc = STDIN.gets.chomp
-			puts ""+ green("---Description set successfully!---") +""
-		end
-	end
+	# 用于 Pgyer/Bugly 显示的测试包更新描述
+	print ""+ magenta("Input description:  ") +""
+	version_desc = STDIN.gets.chomp
+	puts ""+ green("---Description set successfully!---") +""
+    end
+  end
 	
-	# Build 自动增加
-	increment_build_number
+  # Build 自动增加
+  increment_build_number
   puts ""+ green("---Build number updated successfully !---") +""
 	
-	# 自动打 ad_hoc 测试包
-	gym(
-  		workspace:"xxxx.xcworkspace",
-  		scheme:"#{scheme}",
-  		output_name:"#{ipa_name}",
-  		clean:true,
-  		configuration:"Release",
-  		export_method:"ad-hoc",
-  		output_directory:"#{output_path}",
-	)
+  # 自动打 ad_hoc 测试包
+  gym(
+    workspace:"xxxx.xcworkspace",
+    scheme:"#{scheme}",
+    output_name:"#{ipa_name}",
+    clean:true,
+    configuration:"Release",
+    export_method:"ad-hoc",
+    output_directory:"#{output_path}",
+  )
 	
   # 上传到蒲公英 (两种上传平台二选一)
   puts ""+ cyan("---Start uploading ipa to Pgyer---") +""
@@ -699,20 +701,20 @@ lane :ad do
     update_description: "#{version_desc}"
   )
   
-	# 上传Bugly (两种上传平台二选一)
+  # 上传Bugly (两种上传平台二选一)
   puts ""+ cyan("---Start uploading ipa to Bugly---") +""
-	upload_app_to_bugly(
-		file_path:"#{ipa_path}",
-		app_key:"xxxxx",
-		app_id:"xxxx",
-		pid:"2",
-		title:"#{version_title}",",
-		desc:"{version_desc}",
-		secret:"1",
-		users:"",
-		password:"",
-		download_limit:999
-	)
+  upload_app_to_bugly(
+    file_path:"#{ipa_path}",
+    app_key:"xxxxx",
+    app_id:"xxxx",
+    pid:"2",
+    title:"#{version_title}",",
+    desc:"{version_desc}",
+    secret:"1",
+    users:"",
+    password:"",
+    download_limit:999
+ )
 
 end
 end
@@ -738,54 +740,54 @@ platform :ios do
 
 # 一键打包上传到 Pgyer/Bugly
 lane :ad do
-	scheme = "Your project scheme"
-	currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
-	output_path = "../ipa_name #{currentTime}"
-	ipa_name = "Your ipa name"
-	ipa_path = "#{output_path}/#{ipa_name}.ipa"
-	version_title = "xxx"
-	version_desc = "xxxxxx"
+  scheme = "Your project scheme"
+  currentTime = Time.new.strftime("%Y-%m-%d %H-%M-%S")
+  output_path = "../ipa_name #{currentTime}"
+  ipa_name = "Your ipa name"
+  ipa_path = "#{output_path}/#{ipa_name}.ipa"
+  version_title = "xxx"
+  version_desc = "xxxxxx"
   
   def colorize(text, color_code)
-    	"\e[#{color_code}m#{text}\e[0m"
-  	end
+    "\e[#{color_code}m#{text}\e[0m"
+  end
 
-  	def green(text); colorize(text, 32); end
-  	def magenta(text); colorize(text, 35); end
-  	def cyan(text); colorize(text, 36); end
+  def green(text); colorize(text, 32); end
+  def magenta(text); colorize(text, 35); end
+  def cyan(text); colorize(text, 36); end
 	
-	begin
-		# 选择是否手动设置测试包的标题和描述
-		puts ""+ magenta("Do you want to manually set the title of the test package & description? (y/n)") +"" 
-		res = STDIN.gets.chomp
+  begin
+    # 选择是否手动设置测试包的标题和描述
+    puts ""+ magenta("Do you want to manually set the title of the test package & description? (y/n)") +"" 
+    res = STDIN.gets.chomp
 
-		if res != "n"
-			# 用于 Bugly 显示的测试包标题
-			print ""+ magenta("Input title:  ") +""
-			version_title = STDIN.gets.chomp
-			puts ""+ green("---Title set successfully!---") +""
+    if res != "n"
+	# 用于 Bugly 显示的测试包标题
+	print ""+ magenta("Input title:  ") +""
+	version_title = STDIN.gets.chomp
+	puts ""+ green("---Title set successfully!---") +""
 
-			# 用于 Pgyer/Bugly 显示的测试包更新描述
-			print ""+ magenta("Input description:  ") +""
-			version_desc = STDIN.gets.chomp
-			puts ""+ green("---Description set successfully!---") +""
-		end
-	end
+	# 用于 Pgyer/Bugly 显示的测试包更新描述
+	print ""+ magenta("Input description:  ") +""
+	version_desc = STDIN.gets.chomp
+	puts ""+ green("---Description set successfully!---") +""
+    end
+  end
 	
-	# Build 自动增加
-	increment_build_number
+  # Build 自动增加
+  increment_build_number
   puts ""+ green("---Build number updated successfully !---") +""
 	
-	# 自动打 ad_hoc 测试包
-	gym(
-  		workspace:"xxxx.xcworkspace",
-  		scheme:"#{scheme}",
-  		output_name:"#{ipa_name}",
-  		clean:true,
-  		configuration:"Release",
-  		export_method:"ad-hoc",
-  		output_directory:"#{output_path}",
-	)
+  # 自动打 ad_hoc 测试包
+  gym(
+    workspace:"xxxx.xcworkspace",
+    scheme:"#{scheme}",
+    output_name:"#{ipa_name}",
+    clean:true,
+    configuration:"Release",
+    export_method:"ad-hoc",
+    output_directory:"#{output_path}",
+  )
 	
   # 上传到蒲公英 (两种上传平台二选一)
   puts ""+ cyan("---Start uploading ipa to Pgyer---") +""
@@ -798,24 +800,24 @@ lane :ad do
     update_description: "#{version_desc}"
   )
   
-	# 上传Bugly (两种上传平台二选一)
+  # 上传Bugly (两种上传平台二选一)
   puts ""+ cyan("---Start uploading ipa to Bugly---") +""
-	upload_app_to_bugly(
-		file_path:"#{ipa_path}",
-		app_key:"xxxxx",
-		app_id:"xxxx",
-		pid:"2",
-		title:"#{version_title}",",
-		desc:"{version_desc}",
-		secret:"1",
-		users:"",
-		password:"",
-		download_limit:999
-	)
+  upload_app_to_bugly(
+    file_path:"#{ipa_path}",
+    app_key:"xxxxx",
+    app_id:"xxxx",
+    pid:"2",
+    title:"#{version_title}",",
+    desc:"{version_desc}",
+    secret:"1",
+    users:"",
+    password:"",
+    download_limit:999
+  )
 
-puts ""+ green("---ipa to upload successfully !---") +""
+  puts ""+ green("---ipa to upload successfully !---") +""
 
-# 打开蒲公英 / Bugly下载页
+  # 打开蒲公英 / Bugly下载页
   puts ""+ cyan("--- Open Pgyer/Bugly download page ---") +""
   system("open", "xxxx") # xxxx 为下载页 url
 
