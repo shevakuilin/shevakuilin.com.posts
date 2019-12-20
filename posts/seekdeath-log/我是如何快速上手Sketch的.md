@@ -171,3 +171,21 @@
 最后再排放到合适的位置上，扬声器就完成了。
 
 ## 设计一个 Each Logo
+
+好了，现在我们开始尝试设计一个炫酷的 Logo，就像下面这两张一样：
+
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/鹅毛笔logo.jpg" width="353" height ="355" />
+
+
+
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/EachLogo.png" width="353" height ="355" />
+
+我们以第二张 Each Logo 为例，来教大家如何设计一个 Logo
+
+主要知识点：
+
+**交集与差集的结合运用、梯度渐变色**。
+
+**第一步，创建一个 400 * 400 的画板，快键键 U 创建 280 * 45 的圆角矩形**，使其居中对齐在画板当中，然后创建两个 `200 * 45` 的圆角矩形，使其水平居中第一个圆角矩形，间距 `18`，再创建两个 `160 * 45` 的圆角矩形，分别水平对齐第一个圆角矩形的左右两个边线，间距与第二次创建的两个矩形之间也是 `18`
+
+![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤1.jpg)
