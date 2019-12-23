@@ -55,29 +55,29 @@
 
 先从最简单的开始练习，画一个红色的爱心。
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C%E5%9B%BE.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" width="500" height ="500" />
 
 首先打开 Sketch，选择`新文档`
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E6%A1%A3.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E6%A1%A3.jpg" width="1000" height ="645" />
 
 **第一步，我们建立一个画板**，按快捷键`A`，大小设置成 `500*500`，画板默认为白色。然后在画板上，画一个大小为 `240*240` 的正方形，按快捷键 `R`（这个表示要画一个矩形）, 然后按住 `Shift` 键（表示长宽等比 1：1，也就是正方形）, 然后将颜色填充成红色，勾掉边框颜色，如下图：
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E7%88%B1%E5%BF%83%E6%AD%A5%E9%AA%A41.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E7%88%B1%E5%BF%83%E6%AD%A5%E9%AA%A41.jpg" width="1000" height ="645" />
 
 **第二步，在这个正方形之上**，画一个 `240*240` 的圆形，按快捷键 `O`，`O` 默认是椭圆， 然后按住 `Shift` 键（表示要画一个圆形），填充成红色，勾掉边框颜色，并将圆心放在正方形最上面一条边上。如下图:
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E7%88%B1%E5%BF%83%E6%AD%A5%E9%AA%A42.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E7%88%B1%E5%BF%83%E6%AD%A5%E9%AA%A42.jpg" width="1000" height ="665" />
 
 **第三步，复制刚才那个圆形**，沿着正方形的右边线放置，如下图:
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E7%88%B1%E5%BF%83%E6%AD%A5%E9%AA%A43.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E7%88%B1%E5%BF%83%E6%AD%A5%E9%AA%A43.jpg" width="1000" height ="645" />
 
 **第四步，将所有的元件进行编组**，旋转`-45°`就可以了。
 
 首先，选中所有元件（一个正方形，两个圆形），然后点击 Sketch 界面上方导航栏上的 `编组`，选中左侧导航栏的编组，在最右边`x, y`的右侧 `°` 中填入 `-45`:
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E7%88%B1%E5%BF%83%E6%AD%A5%E9%AA%A44.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E7%88%B1%E5%BF%83%E6%AD%A5%E9%AA%A44.jpg" width="1000" height ="645" />
 
 ### 练习2 - Music 图标
 
@@ -87,21 +87,21 @@
 
 现在已经有一些基础了，开始第二个练习，画一个 Music 图标。
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%9F%B3%E7%AC%A6%E6%95%88%E6%9E%9C%E5%9B%BE.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%9F%B3%E7%AC%A6%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" width="400" height ="400" />
 
 **第一步，建立一个大小为 `400\*400` 的画板**，按快捷键 `A`
 
 **第二步，画一个大小为 `60\*45` 的椭圆**，按快捷键 `O`，然后再画一个大小为 `23*165` 的长方形，按快捷键 `R`，通过上下左右键，移动长方形到合适的位置，如果觉得没有那么无缝链接的感觉，可以放大画板再移动，按 `Control` + `+` 放大，`-` 缩小。把椭圆和长方形组成一个编组。**有一个技巧很重要，如果要编辑组内的某一个元素，需要你按住Command键，然后鼠标点击那个元素。**
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%9F%B3%E7%AC%A6%E6%AD%A5%E9%AA%A41.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%9F%B3%E7%AC%A6%E6%AD%A5%E9%AA%A41.jpg" width="1000" height ="645" />
 
 **第三步，复制刚才的那个编组，移动到合适的位置，再画一个合适的长方形**，为了好看，你可以在右边设置一下这个长方形的半径（圆角）为`10`，注意，这次我们要用到`旋转圆角`，先选中元件，然后点击 Sketch 界面顶部导航栏上的 `旋转`，此时会出现一个包含十字的圆形图标在你选中的元件上，鼠标移动到圆形图标上方，鼠标会变成一个旋转箭头图标，然后按住右边的点向上移动。
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%9F%B3%E7%AC%A6%E6%AD%A5%E9%AA%A42.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%9F%B3%E7%AC%A6%E6%AD%A5%E9%AA%A42.jpg" width="1000" height ="645" />
 
 旋转完成之后，就完成了一个 Music 图标的制作。
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%9F%B3%E7%AC%A6%E6%AD%A5%E9%AA%A43.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%9F%B3%E7%AC%A6%E6%AD%A5%E9%AA%A43.jpg" width="1000" height ="645" />
 
 ### 练习3 - 铃声图标
 
@@ -111,36 +111,36 @@
 
 现在难度上升，在这个练习中，我们会画一个铃铛图标：
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%95%88%E6%9E%9C%E5%9B%BE.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" width="300" height ="300" />
 
 **第一步，我们创建一个`300*300`的画板**，然后画一个`80*80`的圆，然后再画一个`80*80`的正方形，如图所示:
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A41.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A41.jpg" width="1000" height ="645" />
 
 **第二步，我们来进行锚点操作**，首先，我们选中正方形，然后点击 Sketch 界面顶部导航栏的 `编辑`，在正方形靠近底部的位置左右两边分别选2个点，在这里我们需要借助于`网格`来操作，可以在Sketch 的顶部工具栏（电脑屏幕最上方的工具栏）里选择`视图`->`画布`->`显示网格`，也可以用快捷键 `Control+G`，分别对最下面的2个点进行拉伸，拉伸的位置需要左右对其，这个时候，网格就会帮上很大的忙了，很轻松的我们就可以左右对称了。
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A42.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A42.jpg" width="1000" height ="645" />
 
 **第三步，我们选中中间的2个锚点**，使其圆角等于`30`，这样就显得很圆滑了。
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A43.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A43.jpg" width="1000" height ="645" />
 
 同样的，我们对最底部的2个锚点，使其圆角等于`2`。
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A44.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A44.jpg" width="1000" height ="645" />
 
 **第四步，最底部小半圆的生成**，我们先把上面画的部分进行`编组`，往上面整体拖动，方便下面小半圆的绘制。
 画一个`30*30`的圆形，然后再圆形的上面画一个`30*60`的长方形。
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A45.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A45.jpg" width="1000" height ="645" />
 
 同时选中这2个，然后进行`减去顶层`操作，最后在把合成的小半圆移动到一个合适的位置
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A46.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A46.jpg" width="1000" height ="645" />
 
 **第五步，铃铛顶部**，画一个大小为`25*10`的矩形，圆角设置为`5`，放到铃铛顶部，露出一半边就可以了
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A47.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A47.jpg" width="1000" height ="645" />
 
 ### 练习4 - 扬声器图标
 
@@ -150,23 +150,26 @@
 
 下面来画一个扬声器图标:
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%95%88%E6%9E%9C%E5%9B%BE.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" width="500" height ="500" />
 
 **第一步:我们建立一个画板**，大小`500*500`，然后画2个空心圆（空心圆只要边框，不要填充），大小分别为`160*160`，`80*80`，并用`网格`进行校对，如下图：
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A41.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A41.jpg" width="1000" height ="645" />
 
 **第二步，建立一个和大圆相同大小的长方形**，遮住大圆的左边（可以不用对准中线，稍微向左挪动一两个像素，完全对准可能出现后面步骤无法用剪刀裁剪路径的问题），同时选中长方形和大圆，进行`减去顶层`，得到如下的图形：
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A42.jpg)![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A43.jpg)![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A44.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A42.jpg" width="1000" height ="645" />
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A43.jpg" width="1000" height ="645" />
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A44.jpg" width="1000" height ="645" />
 
 第四步：对上面2个路径用`剪刀`裁剪，选中元件，然后屏幕顶部工具栏选择`图层` -> `路径` -> `剪刀`，把多余边沿虚线给剪切掉。
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A46.jpg)![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A47.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A46.jpg" width="1000" height ="645" />
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A47.jpg" width="1000" height ="645" />
 
 然后在左边放2个长方形，高度和里面的小圆相同大小80，然后对中间的长方形进行`锚点拉伸`操作，记得要借助于网格：
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A49.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E6%89%AC%E5%A3%B0%E5%99%A8%E6%AD%A5%E9%AA%A49.jpg" width="1000" height ="645" />
 
 最后再排放到合适的位置上，扬声器就完成了。
 
@@ -188,31 +191,31 @@
 
 **第一步，创建一个 400 * 400 的画板，快键键 U 创建 280 * 45 的圆角矩形**，使其居中对齐在画板当中，然后创建两个 `200 * 45` 的圆角矩形，使其水平居中第一个圆角矩形，间距 `18`，再创建两个 `160 * 45` 的圆角矩形，分别水平对齐第一个圆角矩形的左右两个边线，间距与第二次创建的两个矩形之间也是 `18`
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤1.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤1.jpg" width="1000" height ="645" />
 
 **第二步，快捷键 R 创建一个 400 * 400 的矩形，覆盖住画板**，作为整个 Logo 的蒙版层
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤2.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤2.jpg" width="1000" height ="645" />
 
 **第三步，选中蒙版，去掉边框的勾选，并点击填充**，出现几个圆形选项，选择线性渐变，此时会出现一条纵向轴，在下一步中会使用到
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤3.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤3.jpg" width="1000" height ="645" />
 
 **第四步，将上一步中出现的纵向轴的上下两个点，分别拖拽至蒙版的左上角和右下角**，选中左上角的点，颜色 HEX 值设置为 `19CAF1`，选中右下角的点，颜色 HEX 值设置为 `8636F6`，这样就出现了一个从左上角到右下角的蓝紫色渐变蒙版
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤4.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤4.jpg" width="1000" height ="645" />
 
 **第五步，在左侧元素列表中，将设置好颜色的蒙版，拖拽至列表最底部**
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤5.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤5.jpg" width="1000" height ="645" />
 
 **第六步，将画板中所有元素编组，然后选中差集**
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤6.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤6.jpg" width="1000" height ="645" />
 
 **第七步，选中元素列表中最下面的一个矩形（不是最下面的蒙版）**，然后选中`交集`，整体着色完成
 
-![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤7.jpg)
+<img src="https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤7.jpg" width="1000" height ="645" />
 
 ## 最后
 
