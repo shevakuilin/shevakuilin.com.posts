@@ -36,7 +36,7 @@ Ghost 目标是取代臃肿的 Wordpress，界面简洁，专注写作，支持�
 
 技术上，采用 Node.js，并发能力远超使用 [PHP](http://php.net/) 的 Wordpress，独立测试表明，Ghost 比 WordPress 快了 **1,900％**。什么意思呢？就是说，在 WordPress 响应1个请求所花费的时间内，Ghost 已经响应了其中的19个请求。博客的速度会影响一切，从搜索引擎排名到移动用户互动。
 
-![img](https://i0.wp.com/wphive.com/wp-content/uploads/2019/01/ghost-speed.png?w=1024&ssl=1)
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/ghost-speed.png" width="800" height ="266" />
 
 易用性上，没有 Wordpress 那么臃肿，可以专注于写作，完美支持 MarkDown，整合了评论系统，官方和开源社区都提供了很多精致的主题皮肤。
 
