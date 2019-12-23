@@ -1,5 +1,9 @@
 # AutoLayout控件等比间距的百分比布局
 
+地址：https://www.jianshu.com/p/e4f1200709e3 & https://segmentfault.com/a/1190000005272005
+
+创建日期：2016-08-22
+
 **多控件水平、垂直分布要求相同间距时，使用multiplier来进行布局，即百分比布局是最佳选择。**
 
 在看本文前可以了解一下[iOS NSLayoutConstraint][https://developer.apple.com/documentation/uikit/nslayoutconstraint] 其中就提到过multiplier, 本文中的百分比布局都是基于 `multiplier` 实现的，下面来一一查看其实现。
