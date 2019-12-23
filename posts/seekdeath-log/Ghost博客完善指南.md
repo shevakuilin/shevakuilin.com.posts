@@ -13,18 +13,18 @@
 ## 域名备案
 
 为了让网站的域名能够正常的访问到，我们需要申请管局的备案，由于此前买的是阿里云的 ECS，所以直接使用阿里云来进行备案，步骤非常简单。而且最爽的是，你在阿里云进行备案，花费多长时间，就会送你多长时间的 ECS 使用时间，相当于免费的续费服务。
-![](https://github.com/shevakuilin/GhostPostsImages/raw/master/WechatIMG484.jpeg)
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/WechatIMG484.jpeg" width="800" height ="856" />
 
 ## 备案流程
 
 #### 1.验证备案类型：
 
 填写部分主体和网站信息，系统将根据你所填写的信息，自动验证你要办理的备案类型。
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/190022/156439620646090_zh-CN.png)
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/156439620646090_zh-CN.png" width="800" height ="407" />
 
 #### 2.产品验证：
 对搭建备案网站的云服务器进行验证。
-![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/157603/156439614350083_zh-CN.png)
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/156439614350083_zh-CN.png" width="800" height ="332" />
 
 #### 3.填写主体信息和网站信息：
 填写网站信息以及办理备案的个人或者单位的真实信息，按照内容填写即可，详情[参考](https://help.aliyun.com/knowledge_detail/36948.html#section-e7u-ig4-58s)。
@@ -125,7 +125,7 @@ s.src = 'https://EXAMPLE.disqus.com/embed.js';
 
 进入 [官网](https://certbot.eff.org/)，按下图箭头所示选择你的反向代理服务器和系统，我选择的是 Nginx 和 CentOS 7，请参照你自己的具体情况进行选择。
 
-![img](https://github.com/shevakuilin/GhostPostsImages/raw/master/WechatIMG473.png)
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/WechatIMG473.png" width="800" height ="428" />
 
 选择完成后会自动跳转到对应的文档，然后一步步按照文档说明操作，即可完成`安装`和 `HTTPS 证书自动续订`的工作。
 
