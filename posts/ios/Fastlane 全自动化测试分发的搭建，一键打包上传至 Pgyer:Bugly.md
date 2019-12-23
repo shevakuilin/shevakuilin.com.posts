@@ -873,7 +873,7 @@ Archive 完成时，会显示当前打包的类型
 
 至此，Fastlane + 指定平台的全自动化部署测试发布就全部搭建完毕了。同理，上传至 AppStore 一样可以使用 Fastlane 完成自动化部署，有了上面这些经验，就可以很轻松的配置完成了，亲手去尝试和体验 Fastlane 的便捷吧。
 
-## ## 后记
+## 后记
 
 除了 gym ，也可以直接通过 shell 脚本来执行 Fastlane，想了解更多使用上的配置，可以参考 [官方文档](https://docs.fastlane.tools/)
 
