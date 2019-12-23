@@ -113,7 +113,7 @@
 
 ![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%95%88%E6%9E%9C%E5%9B%BE.jpg)
 
-**第一步，我们创建一个`300\*300`的画板**，然后画一个`80*80`的圆，然后再画一个`80*80`的正方形，如图所示:
+**第一步，我们创建一个`300*300`的画板**，然后画一个`80*80`的圆，然后再画一个`80*80`的正方形，如图所示:
 
 ![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/%E9%93%83%E9%93%9B%E6%AD%A5%E9%AA%A41.jpg)
 
@@ -189,3 +189,31 @@
 **第一步，创建一个 400 * 400 的画板，快键键 U 创建 280 * 45 的圆角矩形**，使其居中对齐在画板当中，然后创建两个 `200 * 45` 的圆角矩形，使其水平居中第一个圆角矩形，间距 `18`，再创建两个 `160 * 45` 的圆角矩形，分别水平对齐第一个圆角矩形的左右两个边线，间距与第二次创建的两个矩形之间也是 `18`
 
 ![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤1.jpg)
+
+**第二步，快捷键 R 创建一个 400 * 400 的矩形，覆盖住画板**，作为整个 Logo 的蒙版层
+
+![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤2.jpg)
+
+**第三步，选中蒙版，去掉边框的勾选，并点击填充**，出现几个圆形选项，选择线性渐变，此时会出现一条纵向轴，在下一步中会使用到
+
+![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤3.jpg)
+
+**第四步，将上一步中出现的纵向轴的上下两个点，分别拖拽至蒙版的左上角和右下角**，选中左上角的点，颜色 HEX 值设置为 `19CAF1`，选中右下角的点，颜色 HEX 值设置为 `8636F6`，这样就出现了一个从左上角到右下角的蓝紫色渐变蒙版
+
+![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤4.jpg)
+
+**第五步，在左侧元素列表中，将设置好颜色的蒙版，拖拽至列表最底部**
+
+![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤5.jpg)
+
+**第六步，将画板中所有元素编组，然后选中差集**
+
+![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤6.jpg)
+
+**第七步，选中元素列表中最下面的一个矩形（不是最下面的蒙版）**，然后选中`交集`，整体着色完成
+
+![img](https://github.com/shevakuilin/GhostImagesSketch/raw/master/Logo设计步骤7.jpg)
+
+## 最后
+
+经过一系列的基础练习，你已经掌握了使用 Sketch 最常用的操作和技巧，快去试试完成第一个自己独立的作品吧，加油
