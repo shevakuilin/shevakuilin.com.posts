@@ -116,11 +116,11 @@ $ fastlane init
 
 初始化完成后提示如下：
 
-![](https://github.com/shevakuilin/GhostImageFastlane/raw/master/FF17F5D2-2750-4A32-8D14-A5D1E9CAA323.png)
+<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/FF17F5D2-2750-4A32-8D14-A5D1E9CAA323.png" width="800" height ="768" />
 
 安装完成后，你的工程目录下会出现一个名为 `fastlane` 的文件夹，一个名为 `Gemfile` 和 `Gemfile.lock` 的文件。进入 `fastlane` 文件夹，打开 `Appfile`，填入你的 `应用标识名` 和 `开发者账号名`
 
-![](https://github.com/shevakuilin/GhostImageFastlane/raw/master/D4A66025-886B-4764-993E-AD6125DD3914.png)
+<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/FF17F5D2-2750-4A32-8D14-A5D1E9CAA323.png" width="800" height ="472" />
 
 ## Fastfile 脚本的编写
 
@@ -282,7 +282,7 @@ end
 
 - Versioning System 选择 Apple Generic ( Xcode 11 以上版本忽略 )
 
-<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/ABD24EC4-D621-4EFC-B7A6-DC3949ABFB11.png">
+<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/ABD24EC4-D621-4EFC-B7A6-DC3949ABFB11.png" width="800" height ="211" />
 
 ### 设置 Bundle version & Bundle versions string, short
 
@@ -292,7 +292,8 @@ end
 
 - Bundle versions string, short 是当前应用的 Version 版本号，如果需要自增 Version 再设置 `$(MARKETING_VERSION)`，其对应的脚本参数是 [increment_version_number](https://docs.fastlane.tools/actions/increment_version_number/)，仅自增 Build 无需设置
 
-<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/8DE8A5BF-92CC-422A-B9F9-112AF2005FBF.png">
+
+<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/8DE8A5BF-92CC-422A-B9F9-112AF2005FBF.png" width="800" height ="353" />
 
 
 
@@ -310,7 +311,7 @@ $ fastlane add_plugin pgyer
 
 期间会询问一次，选择 `y` 即可，出现下面提示表示安装成功
 
-<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/136DA6C3-A3DF-4549-B545-43567B15318C.png">
+<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/136DA6C3-A3DF-4549-B545-43567B15318C.png" width="800" height ="196" />
 
 安装成功后，在 gym 下面加入蒲公英插件的配置信息：
 
@@ -839,7 +840,7 @@ $ fastlane ad
 
 当 Fastlane 的小火箭开始出现，就表明 lane 指令开始执行了，以上传到 Pgyer 为例：
 
-<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/C52214C1-456D-4E2F-99A6-6A55F361CD53.png">
+<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/C52214C1-456D-4E2F-99A6-6A55F361CD53.png" width="800" height ="262" />
 
 首先会询问是否需要修改更新描述，这里示范输入 "Fastlane测试"
 
@@ -847,11 +848,11 @@ $ fastlane ad
 
 输入完成后回车，继续执行，递增 Build 版本号
 
-<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/B3F80164-8013-42A7-A066-D74BF005915D.png">
+<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/B3F80164-8013-42A7-A066-D74BF005915D.png" width="800" height ="326" />
 
 随后开始执行 gym 配置命令，打包开始
 
-<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/16C6B833-23C7-45C7-B5C6-219A398653B7.png">
+<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/16C6B833-23C7-45C7-B5C6-219A398653B7.png" width="800" height ="445" />
 
 Archive 完成时，会显示当前打包的类型
 
@@ -859,7 +860,7 @@ Archive 完成时，会显示当前打包的类型
 
 打包完成后，导出 ipa、dSYM 等文件到指定输出路径，随后开始上传到 Pgyer
 
-<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/B99226DE-8397-43AD-AC10-7B1ACBE99BE4.png">
+<img src="https://github.com/shevakuilin/GhostImageFastlane/raw/master/B99226DE-8397-43AD-AC10-7B1ACBE99BE4.png" width="800" height ="128" />
 
 上传完成后，会自动打开默认浏览器并跳转到下载页面，并显示当前耗时
 
