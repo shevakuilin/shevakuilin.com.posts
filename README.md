@@ -39,7 +39,7 @@ Stay hungry, stay foolish
 
 [《使用 SwiftUI 构建你的新应用》](./posts/ios/使用SwiftUI构建你的新应用.md)
 
-[《SDWebImage框架下的图片渐变加载效果》](./posts/ios/SDWebImage框架下的图片渐变加载效果)
+[《SDWebImage框架下的图片渐变加载效果》](./posts/ios/SDWebImage框架下的图片渐变加载效果.md)
 
 [《AutoLayout控件等比间距的百分比布局》](./posts/ios/AutoLayout控件等比间距的百分比布局.md)
 
