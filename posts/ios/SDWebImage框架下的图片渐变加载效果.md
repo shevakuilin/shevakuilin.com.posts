@@ -135,7 +135,7 @@ typedef NS_OPTIONS(NSUInteger, SDWebImageOptions) {
 
 我们可以在`SDWebImageCompletionBlock`这个Block块中来实现我们的`CATransition`动画
 
-```objc
+```swift
 /*
 *  @param options: 选择.lowPriority(oc中是SDWebImageLowPriority)，是为了禁止在UI交互过程中启动图像下载，保证列表流畅性。例如，导致UIScrollView减速的下载延迟
 *
@@ -161,7 +161,7 @@ imageView.sd_setImage(with: theUrl as URL, placeholderImage: UIImage(named: "new
 
 然后，我们遵循`CAAnimationDelegate`协议，并实现`animationDidStop(_ anim: CAAnimation, finished flag: Bool)`方法：
 
-```objc
+```swift
 // MARK: 监听渐变动画是否已完成
 func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
    if flag {
@@ -174,7 +174,7 @@ func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
 
 上面的代码只是为了演示，最好还是将其进行封装：
 
-```objective-c
+```objc
 // UIImageView+IETransition.h
 
 #import <UIKit/UIKit.h>
@@ -193,7 +193,7 @@ func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
 
 ```
 
-```objective-c
+```objc
 //  UIImageView+IETransition.m
 
 #import "UIImageView+IETransition.h"
