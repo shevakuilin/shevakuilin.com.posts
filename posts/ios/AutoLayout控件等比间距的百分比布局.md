@@ -6,7 +6,7 @@
 
 **多控件水平、垂直分布要求相同间距时，使用multiplier来进行布局，即百分比布局是最佳选择。**
 
-在看本文前可以了解一下[iOS NSLayoutConstraint][https://developer.apple.com/documentation/uikit/nslayoutconstraint] 其中就提到过multiplier, 本文中的百分比布局都是基于 `multiplier` 实现的，下面来一一查看其实现。
+在看本文前可以了解一下[iOS NSLayoutConstraint](https://developer.apple.com/documentation/uikit/nslayoutconstraint) 其中就提到过multiplier, 本文中的百分比布局都是基于 `multiplier` 实现的，下面来一一查看其实现。
 
 ------
 
