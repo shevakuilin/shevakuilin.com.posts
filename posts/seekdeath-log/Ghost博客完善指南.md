@@ -98,14 +98,14 @@ $ vim post.hbs
 
 如果你使用的是默认主题 **Casper**，会看到专门为插入注释而保留的一行代码。这就是你要粘贴 Disqus 代码的地方：
 
-![img](https://mainframe.ghost.io/content/images/2018/10/image-15.png)
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/image-15.png" width="800" height ="172" />
 
 注意：需要将第 65 行和第 69 行的注释删除。
 
 ### 3.找到你的 Disqus shortname
 
 访问 [Disqus Admin](https://disqus.com/admin/)，创建一个站点或选择一个现有站点。从站点的设置区域中，找到shortname并复制它。
-![img](https://mainframe.ghost.io/content/images/2018/10/image-16.png)
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/image-16.png" width="800" height ="242" />
 
 ### 4.插入 shortname 到 Disqus 代码中
 
