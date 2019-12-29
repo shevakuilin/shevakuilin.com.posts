@@ -26,6 +26,8 @@
 
 [《两数之和-输入有序数组》](./posts/algorithm/两数之和-输入有序数组.md)
 
+[《世界杯夺冠球队猜想》](./posts/algorithm/世界杯夺冠球队猜想.md)
+
 <h2 id="2">For iOS</h2>
 Stay hungry, stay foolish
 
