@@ -1,6 +1,6 @@
 # SDWebImage框架下的图片渐变加载效果
 
-地址：https://www.jianshu.com/p/7a93a9f262fd
+地址：https://www.jianshu.com/p/7a93a9f262fd, https://shevakuilin.com/sdwebimage-gradient/
 
 创建时间：2017-10-29
 
