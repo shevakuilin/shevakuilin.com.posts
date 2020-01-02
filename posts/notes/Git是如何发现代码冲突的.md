@@ -20,6 +20,8 @@
 
 首先说一下 Git 是如何储存数据的，Git 作为一个内容寻址文件系统，本质上是一个**键值对数据库**（key-value data store）。每存储一份数据，都会返回一个 `40` 位的 Hash 值作为`键`，通过这个键，我们就能找到所存储的数据。其中 Hash 值的前 `2` 位作为目录，后 `38` 位为文件名。文件的内容就是键值对的`值` ，也就是 Git 存储的一系列数据。
 
+<img src="https://github.com/shevakuilin/GhostImageGit/raw/master/git数据格式.png" width="300" height ="300" />
+
 Git 中的文件有三种状态：
 
 - 未暂存
