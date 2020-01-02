@@ -54,3 +54,6 @@ Git 在每次提交时，会将暂存区的所有数据保存起来，这时会�
 Git 使用**数据对象**来记录每一个文件的数据。比如将一个文件添加到暂存区（index）中，这时，在 `objects` 目录下就会产生一个数据对象。
 
 Git 就是将所需要用到的数据转为这四种对象，并且以 Hash 值为文件名的文件的形式，保存在 `.git/objects` 中。
+
+<img src="https://github.com/shevakuilin/GhostImageGit/raw/master/git对象.png" width="800" height ="400" />
+
