@@ -57,3 +57,10 @@ Git 就是将所需要用到的数据转为这四种对象，并且以 Hash 值�
 
 <img src="https://github.com/shevakuilin/GhostImageGit/raw/master/git对象.png" width="800" height ="400" />
 
+## 参考
+
+[Git从原理到解决冲突](https://blog.csdn.net/qq_35414779/article/details/82630079)
+
+[Git存储数据的原理](https://juejin.im/entry/5b4ad83af265da0f926b759a)
+
+[Git 基础 - 打标签]([https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE](https://git-scm.com/book/zh/v2/Git-基础-打标签))
