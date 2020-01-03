@@ -14,7 +14,7 @@
 
 > Git 是如何发现冲突的，能从原理上进行说明吗？它在进行检测的时候，是对本地和远程全部进行匹配吗，如果不是怎么做的？
 
-非常有意思的问题，所以写这篇文章来从 Git 的原理上分析，它究竟是如何发现并定位冲突的。
+非常有意思的问题，所以写这篇文章来从 Git 的原理上分析，它究竟是如何发现并定位冲突的，从而反向推出面试官想要考察的知识点。
 
 ## Git 如何存储数据？
 
@@ -57,9 +57,9 @@ Git 就是将所需要用到的数据转为这四种对象，并且以 Hash 值�
 
 <img src="https://github.com/shevakuilin/GhostImageGit/raw/master/git对象.png" width="800" height ="400" />
 
-## Git 如何检测文件改动
+## Git 如何检测文件改动并定位？
 
-
+每当所储存的文件发生改动，其对应的 Hash 值就会产生变化，对比不同版本文件的 Hash 值，即可知道文件是否发生过改变。
 
 ## 参考
 
@@ -68,3 +68,7 @@ Git 就是将所需要用到的数据转为这四种对象，并且以 Hash 值�
 [Git存储数据的原理](https://juejin.im/entry/5b4ad83af265da0f926b759a)
 
 [Git 基础 - 打标签](https://git-scm.com/book/zh/v2/Git-基础-打标签)
+
+[用 diff 来检查改动](https://www.git-tower.com/learn/git/ebook/cn/command-line/advanced-topics/diffs)
+
+[Git 是怎样生成 diff 的：Myers 算法](https://cjting.me/2017/05/13/how-git-generate-diff/)
