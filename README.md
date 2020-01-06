@@ -65,6 +65,8 @@ Stay hungry, stay foolish
 
 -----
 
+[《通告：之前网站无法访问，因为数据库出了问题，现已逐渐恢复》](./posts/essay/数据库通告.md)
+
 [《数字货币DCEP--美元霸权的终结者》](./posts/essay/数字货币DCEP--美元霸权的终结者.md)
 
 [《难追难回味》](./posts/essay/难追难回味.md)
