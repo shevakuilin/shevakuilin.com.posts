@@ -112,7 +112,7 @@ Git 为我们生成的 diff 是很直观易懂的，"+"和"-"的区域划分非�
 
 寻找 diff 的过程可以被表示为图搜索，寻找 diff 实际上就是个图搜索的问题，至于为什么，我猜你肯定不想看数学证明。所以这里直接给出结论：**最直观最简短的 diff = 寻找图的最短路径**，这也是**Myers 算法**的基本思想。
 
-<img src="https://github.com/shevakuilin/GhostImageGit/raw/master/WX20200107-110854.png" width="800" height ="737" />
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/WX20200107-110854.png" width="800" height ="737" />
 
 **Myers算法**背后的想法非常简单：如图对比两个字符串`ABCABBA` 和 `CBABAC`之间的差异。我们希望以尽可能少的步骤从（0,0）移动到（7,6）（右下）。「移动」是向右（从`a`删除）或向下（从`b` 插入）的单个步骤。图中我们从`a`移动到`b`进行的最多移动数是13：两个字符串的总长度 7 + 6。
 
