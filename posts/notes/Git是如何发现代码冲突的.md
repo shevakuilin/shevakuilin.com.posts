@@ -157,7 +157,5 @@ Git 为我们生成的 diff 是很直观易懂的，"+"和"-"的区域划分非�
 [用 diff 来检查改动](https://www.git-tower.com/learn/git/ebook/cn/command-line/advanced-topics/diffs)
 [Git 是怎样生成 diff 的：Myers 算法](https://cjting.me/2017/05/13/how-git-generate-diff/)
 [The Myers diff algorithm: part 1](https://blog.jcoglan.com/2017/02/12/the-myers-diff-algorithm-part-1/)
-
 [The Myers diff algorithm: part 2](https://blog.jcoglan.com/2017/02/15/the-myers-diff-algorithm-part-2/)
-
 [The Myers diff algorithm: part 3](https://blog.jcoglan.com/2017/02/17/the-myers-diff-algorithm-part-3/)
