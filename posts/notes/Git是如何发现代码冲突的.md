@@ -94,7 +94,7 @@ Git 会告诉你哪些行存在差异，它们被显示在两个 “@@” 符号
 
 在每一个被改动过的代码行之前都会前置一个 “+” 或是 “-” 符号。这些符号可以帮助你准确了解版本 a 和 版本 b ，例如前置了 “-” 符号的行就代表来自版本 a，反之带有符号 “+” 的行就代表来自于版本 b。
 
-```objective-c
+```objc
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 -    [self toOrderPaymentStatusWithOrderInfo:@""];
 +    if (indexPath.row > 20) {
