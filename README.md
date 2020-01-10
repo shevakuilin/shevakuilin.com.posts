@@ -86,6 +86,8 @@ Stay hungry, stay foolish
 
 [《我是如何快学上手 Sketch 的》](./posts/seekdeath-log/我是如何快速上手Sketch的.md)
 
+[《Navicat Premium For Mac 备份与恢复数据库》](./posts/seekdeath-log/NavicatPremiumForMac备份与恢复数据库.md)
+
 <h2 id="7">游戏人生</h2>
 我们的人生就像向日葵一样，永远向着太阳，只有夜晚才低下头，那时候才是自己吧
 
