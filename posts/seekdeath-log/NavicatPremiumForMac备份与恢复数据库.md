@@ -27,11 +27,22 @@
 
 ## 数据库备份
 
-首先我们需要建立 Navicat Premium 与服务器数据库的连接，以此来进行服务器数据库的备份。
+首先我们需要建立 Navicat Premium 与服务器数据库的连接，以此来进行服务器数据库的备份。这里以阿里云为例，如果你已经设置过服务器的安全组规则，并且开放了数据库的访问权限，那么可以**直接跳过**步骤一和步骤二。
 
 ### 步骤一、创建安全组规则
 
-这里以阿里云为例，如果你已经设置过服务器的安全组规则，并且开放了数据库的访问权限，那么可以**直接跳过**步骤一和步骤二。
+1.访问**阿里云主页** -> 进入**控制台** -> 选中**云服务器 ECS**
 
-访问**阿里云主页** -> 进入**控制台** -> 找到**云服务器 ECS** -> 在**网络与安全**分类中找到**安全组** 
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/0CD6A5A9-3368-4F89-9A65-39478ACB5218.png" width="800" height ="603" />
 
+2.在**网络与安全**分类中选中**安全组**
+
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/05F36712-AE39-439E-9EF3-CF11C02B4E2D.png" width="317" height ="800" />
+
+3.点击**配置规则**
+
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/454BD119-0ECA-49B7-BF4D-D48BAAFC1451.png" width="800" height ="229" />
+
+4.选择**添加安全组规则**，照搬图上的配置即可
+
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/3777C03A-5BB4-4442-9164-68CD072CBC99.png" width="800" height ="544" />
