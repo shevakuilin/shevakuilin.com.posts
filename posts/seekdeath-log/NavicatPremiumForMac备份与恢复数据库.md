@@ -25,7 +25,7 @@
 
 本文主要介绍如何利用 Navicat Premium 中自带的备份工具进行备份和恢复。
 
-## 数据库备份
+## 数据库连接
 
 首先我们需要建立 Navicat Premium 与服务器数据库的连接，以此来进行服务器数据库的备份。这里以阿里云为例，如果你已经设置过服务器的安全组规则，并且开放了数据库的访问权限，那么可以**直接跳过**步骤一和步骤二。
 
@@ -65,13 +65,26 @@ $ GRANT ALL PRIVILEGES ON *.* TO 'root'@'xxx.xxx.xxx.xxx' IDENTIFIED BY 'xxxxxx'
 $ flush privileges;
 ```
 
-### 步骤三、通过SSH在本地连接到云服务器上的数据库
+### 步骤三、通过 SSH 在本地连接到云服务器上的数据库
 
 打开 Navicat Premium，点击 Connection 进行数据库连接，会出现一个下拉菜单，需要你选择所使用的的数据库类型。本文使用的是 MariaDB，它是 MySQL 的一个开源版本，所以直接选择 MySQL 即可。
 
 <img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/65C787C9-FA10-4560-8AD0-D2B1299410B3.png" width="800" height ="530" />
 
-通用配置，填写连接名称、数据库用户名和密码，其他保持默认不需要修改。
+设置通用配置，填写连接名称、数据库用户名和密码，其他保持默认不需要修改
 
 <img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/FDFB8368-534C-4F7C-821E-178E666CFDE1.png" width="800" height ="736" />
 
+设置 SSH 配置，填写服务器公有 IP 地址、用户名和密码，完成后点击保存，左侧的连接列表中会出现绿色图标的连接名称，连接名称就是你在通用配置中设置的名字，表示连接成功
+
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/75F7376B-BEA7-4EF8-AE73-7289629911B3.png" width="800" height ="678" />
+
+## 数据库备份
+
+双击上面刚创建的那个已连接的连接名称（如果未连接，右键选中连接名称，出现的下拉菜单中选择连接即可），选中你想要进行备份的数据库，双击展开，右键 `Backups` 出现下拉菜单，选择 `New Backups` 进行备份
+
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/0404A1F7-4439-4244-AD7A-9EB181CD3B6E.png" width="524" height ="772" />
+
+点击开始，进行备份，看到提示成功即可关闭该页面，备份成功后，展开 `Backups` 后下面会出现刚刚备份完成的数据库备份文件，文件以时间戳为名，`nb3` 为后缀。备份完成的文件默认保存在 `/Users/用户名/Library/Application Support/PremiumSoft CyberTech/Navicat CC/Common/Settings/0/0/MySQL/连接名称/备份的数据库名称` 路径下
+
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/94FA4589-6BCF-43FD-BBBA-A616ECAE3E5F.png" width="800" height ="619" />
