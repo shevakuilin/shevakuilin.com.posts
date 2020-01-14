@@ -100,3 +100,12 @@ $ flush privileges;
 如果你的数据库是存在的，那就很简单了，直接双击选择备份文件，开始恢复即可
 
 <img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/F4BC8B5F-56D4-40E7-9D2D-D5326FF79216.png" width="800" height ="619" />
+
+本文至此就全部结束了，有没看懂的欢迎下面留言，评论区需要科学上网哈
+
+## 参考
+
+[Navicat Premium实现mysql数据库备份/还原](https://blog.csdn.net/xiaocheng2290/article/details/77683678)
+
+[通过Navicat Premium连接到Centos服务器上的Mysql数据库](https://blog.csdn.net/weixin_42235488/article/details/80543892)
+
