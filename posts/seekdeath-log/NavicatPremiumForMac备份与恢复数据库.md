@@ -46,3 +46,23 @@
 4.选择**添加安全组规则**，照搬图上的配置即可
 
 <img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/3777C03A-5BB4-4442-9164-68CD072CBC99.png" width="800" height ="544" />
+
+### 步骤二、开放数据库访问权限
+
+在数据库中执行如下命令
+
+```vim
+$ GRANT ALL PRIVILEGES ON *.* TO 'root'@'xxx.xxx.xxx.xxx' IDENTIFIED BY 'xxxxxx' WITH grant option;
+```
+
+**ALL PRIVILEGES**：表示开放全部数据库权限，当然那你也可以只提供部分权限
+**.** ：表示开放所有权限范围，这里的范围指的是数据库和表
+**root** ：表示该数据库的用户名
+**xxx.xxx.xxx.xxx** ：表示其公有IP地址
+**BY 'xxxxxx' WITH**：表示数据库密码
+
+```vim
+$ flush privileges;
+```
+
+### 步骤三、通过SSH在本地连接到云服务器上的数据库
