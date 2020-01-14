@@ -66,3 +66,12 @@ $ flush privileges;
 ```
 
 ### 步骤三、通过SSH在本地连接到云服务器上的数据库
+
+打开 Navicat Premium，点击 Connection 进行数据库连接，会出现一个下拉菜单，需要你选择所使用的的数据库类型。本文使用的是 MariaDB，它是 MySQL 的一个开源版本，所以直接选择 MySQL 即可。
+
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/65C787C9-FA10-4560-8AD0-D2B1299410B3.png" width="800" height ="530" />
+
+通用配置，填写连接名称、数据库用户名和密码，其他保持默认不需要修改。
+
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/FDFB8368-534C-4F7C-821E-178E666CFDE1.png" width="800" height ="736" />
+
