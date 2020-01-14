@@ -45,7 +45,7 @@
 
 4.选择**添加安全组规则**，照搬图上的配置即可
 
-<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/3777C03A-5BB4-4442-9164-68CD072CBC99.png" width="800" height ="544" />
+<img src="https://github.com/shevakuilin/GhostPostsImages/raw/master/7445E51C-5C92-4A57-A613-2194875AD35D.png" width="800" height ="563" />
 
 ### 步骤二、开放数据库访问权限
 
