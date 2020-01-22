@@ -29,6 +29,8 @@
 
 [《世界杯夺冠球队猜想》](./posts/algorithm/世界杯夺冠球队猜想.md)
 
+《随机算法》
+
 <h2 id="2">For iOS</h2>
 Stay hungry, stay foolish
 
