@@ -29,7 +29,7 @@
 
 [《世界杯夺冠球队猜想》](./posts/algorithm/世界杯夺冠球队猜想.md)
 
-《洗牌随机算法》
+《洗牌随机算法》(./posts/algorithm/洗牌随机算法.md)
 
 <h2 id="2">For iOS</h2>
 Stay hungry, stay foolish
