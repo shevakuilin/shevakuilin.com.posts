@@ -133,6 +133,6 @@ A: `vval` 可以理解为标记值， `DISPATCH_ONCE_DONE` 用来标记回调是
 
 ## 和 @synchronized 的优劣分析？
 
-Q: 和 `synchronized` 的优劣分析？
+Q: 和 `@synchronized` 的优劣分析？
 
-A: 相比之下 `dispatch_once` 的性能更高，速度更快，并且针对处理器进行了优化。两者分别利用来不同的方式来保证线程安全， `synchronized` 采用的是递归互斥锁的方式来保证线程安全，而 `dispatch_once` 是使用原子操作来代替锁，使用信号量来保证线程同步。
+A: 相比之下 `dispatch_once` 的性能更高，速度更快，并且针对处理器进行了优化。两者分别利用来不同的方式来保证线程安全， `@synchronized` 采用的是递归互斥锁的方式来保证线程安全，而 `dispatch_once` 是使用原子操作来代替锁，使用信号量来保证线程同步。
