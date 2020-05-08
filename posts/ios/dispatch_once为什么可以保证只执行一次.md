@@ -123,7 +123,7 @@ A: 其内部定义了多个 `_dispatch_once_waiter_s ` 结构体和一个 `_disp
 
 Q: `dispatch_once` 中的原子性操作是怎样的?
 
-A: 原子性操作是 `dispatch_atomic_cmpxchg(vval, NULL, &dow, acquire)` ，会将 `$dow` 赋值给 `vval` ，如果 `vval` 的初始值为NULL，返回 `YES` ,否则返回 `NO` 。以及dispatch_atomic_xchg(vval, DISPATCH_ONCE_DONE)` 将 `vval` 修改为指定状态 `DISPATCH_ONCE_DONE。
+A: 原子性操作是 `dispatch_atomic_cmpxchg(vval, NULL, &dow, acquire)` ，会将 `$dow` 赋值给 `vval` ，如果 `vval` 的初始值为NULL，返回 `YES` ,否则返回 `NO` 。以及`dispatch_atomic_xchg(vval, DISPATCH_ONCE_DONE)` 将 `vval` 修改为指定状态 `DISPATCH_ONCE_DONE`。
 
 ## vval 代表什么？ DISPATCH_ONCE_DONE 又表示什么？
 
