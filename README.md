@@ -29,7 +29,7 @@
 
 [《世界杯夺冠球队猜想》](./posts/algorithm/世界杯夺冠球队猜想.md)
 
-《洗牌随机算法》(./posts/algorithm/洗牌随机算法.md)
+[《洗牌随机算法》](./posts/algorithm/洗牌随机算法.md)
 
 <h2 id="2">For iOS</h2>
 Stay hungry, stay foolish
@@ -47,6 +47,8 @@ Stay hungry, stay foolish
 [《SDWebImage框架下的图片渐变加载效果》](./posts/ios/SDWebImage框架下的图片渐变加载效果.md)
 
 [《AutoLayout控件等比间距的百分比布局》](./posts/ios/AutoLayout控件等比间距的百分比布局.md)
+
+[《dispatch_once 为什么可以保证只执行一次？》](./posts/ios/dispatch_once为什么可以保证只执行一次.md)
 
 <h2 id="3">札记</h2>
 任何执拗都会成为过往，只有时间会告诉你对错
